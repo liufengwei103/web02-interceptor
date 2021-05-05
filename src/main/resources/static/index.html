@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta http-equiv="Content-Type" content="multipart/form-data">-->
+    <title>首页</title>
+</head>
+<body>
+    <h1>欢迎来到首页！</h1>
+
+    ============================================================</br>
+    测试rest风格<br/>
+    <form action="/user" method="get">
+        <input type="submit" value="get表单提交">
+    </form>
+
+    <form action="/user" method="post">
+        <input type="submit" value="post表单提交">
+    </form>
+
+    ============================================================</br>
+    登录</br>
+    <form action="/login" method="post">
+        <input name="username"><br/>
+        <input name="password"><br/>
+        <input type="submit" value="login表单提交">
+</form>
+
+    ============================================================</br>
+    文件上传功能</br>
+<!--    文件上传form表单必须设置enctype-->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div>
+            <label>邮箱</label><br/>
+            <input name="email" type="email" placeholder="请输入邮箱地址">
+        </div>
+
+        <div>
+            <label>用户名</label><br/>
+            <input name="username" type="text" placeholder="请输入用户名">
+        </div>
+
+        <div>
+            <label>头像</label><br/>
+            <input name="headImg" type="file">
+        </div>
+
+        <div>
+            <label>生活照</label><br/>
+            <input name="photos" type="file" multiple>
+        </div>
+
+        <button type="submit">提交</button>
+    </form>
+
+</body>
+</html>
